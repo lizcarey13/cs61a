@@ -9,9 +9,9 @@ def a_plus_abs_b(a, b):
     5
     """
     if b < 0:
-        f = sub(a,b)
+        f = sub
     else:
-        f = add(a,b)
+        f = add
     return f(a, b)
 
 def two_of_three(a, b, c):
