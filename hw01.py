@@ -27,7 +27,8 @@ def two_of_three(a, b, c):
     >>> two_of_three(5, 5, 5)
     50
     """
-    "*** YOUR CODE HERE ***"
+    return max(a*a+b*b, a*a+c*c, b*b+c*c)
+
 
 def if_function(condition, true_result, false_result):
     """Return true_result if condition is a true value, and
