@@ -29,6 +29,17 @@ def two_of_three(a, b, c):
     """
     return max(a*a+b*b, a*a+c*c, b*b+c*c)
 
+def largest_factor(n):
+    """Return the largest factor of n*n-1 that is smaller than n.
+
+    >>> largest_factor(4) # n*n-1 is 15; factors are 1, 3, 5, 15
+    3
+    >>> largest_factor(9) # n*n-1 is 80; factors are 1, 2, 4, 5, 8, 10, ...
+    8
+    """
+    #n*n-1 is equal to (n-1) * (n+1), so n-1 always evenly divides n*n-1.
+    return n-1
+
 
 def if_function(condition, true_result, false_result):
     """Return true_result if condition is a true value, and
@@ -43,10 +54,19 @@ def if_function(condition, true_result, false_result):
     >>> if_function(3>2, 3+2, 3-2)
     5
     """
-    if condition:
+    if condition == True:
         return true_result
     else:
         return false_result
+
+#write functions c, t, and f such that with_if_statement 
+#returns the number 1, but with_if_function does not (it can do anything else):
+#The function with_if_function uses a call expression, 
+#which guarantees that all of its operand subexpressions will be evaluated 
+#before if_function is applied to the resulting arguments. 
+#Therefore, even if c returns False, the function t will be called. 
+#By contrast, with_if_statement will never call t if c returns False.
+
 
 def with_if_statement():
     """
@@ -62,13 +82,13 @@ def with_if_function():
     return if_function(c(), t(), f())
 
 def c():
-    "*** YOUR CODE HERE ***"
+    return False
 
 def t():
-    "*** YOUR CODE HERE ***"
+    1/0
 
 def f():
-    "*** YOUR CODE HERE ***"
+    return 1
 
 def hailstone(n):
     """Print the hailstone sequence starting at n and return its
