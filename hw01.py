@@ -90,6 +90,7 @@ def t():
 def f():
     return 1
 
+
 def hailstone(n):
     """Print the hailstone sequence starting at n and return its
     length.
@@ -105,7 +106,16 @@ def hailstone(n):
     >>> a
     7
     """
-    "*** YOUR CODE HERE ***"
+    count = 1
+    while n != 1:
+        print (int(n)) 
+        if (n % 2) == 0: 
+            n = n/2
+        else:
+            n = n*3+1
+        count += 1
+    return count
+
 
 challenge_question_program = """
 "*** YOUR CODE HERE ***"
