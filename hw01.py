@@ -118,8 +118,20 @@ def hailstone(n):
     return count
 
 
-challenge_question_program = """
-"*** YOUR CODE HERE ***"
-"""
 
+"""Write a one-line program that prints itself, using only the following 
+features of the Python language:
+
+Number literals
+Assignment statements
+String literals that can be expressed using single or double quotes
+The arithmetic operators +, -, *, and /
+The built-in print function
+The built-in eval function, which evaluates a string as a Python expression
+The built-in repr function, which returns an expression that evaluates to its argument
+You can concatenate two strings by adding them together with + and repeat a string by 
+multipying it by an integer. Semicolons can be used to separate multiple statements on 
+the same line."""
+
+challenge_question_program ='a'; print('hello', "world" * 2 + ' How are you?'); print(eval('2+2')); x = "hello"; repr(x); print(repr(5))
 
