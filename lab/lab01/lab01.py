@@ -10,10 +10,7 @@ def both_positive(x, y):
     >>> both_positive(1, 1)
     True
     """
-    if x > 0 and y > 0:
-        return True
-    else:
-        return False
+    return x >0 and y > 0
 
 
 # If Statements
