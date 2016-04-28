@@ -103,9 +103,8 @@ def guess_linear():
     prompt_for_number(LOWER, UPPER)
     num_guesses = 1
     guess = LOWER
-    while not correct:
-        guess = LOWER + 1
-        correct = is_correct(guess)
+    while guess != is_correct(guess):
+        guess += 1
         num_guesses = num_guesses + 1
     return num_guesses
 def guess_binary():
