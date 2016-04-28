@@ -54,7 +54,12 @@ def factors(n):
     2
     1
     """
-    "*** YOUR CODE HERE ***"
+    x = n
+    while x > 0:
+        if n % x ==0:
+            print(x)
+        x -= 1
+
 
 def falling(n, k):
     """Compute the falling factorial of n to depth k.
@@ -68,7 +73,13 @@ def falling(n, k):
     >>> falling(4, 1)  # 4
     4
     """
-    "*** YOUR CODE HERE ***"
+    increment = 1
+    while k > 0: 
+        increment = increment * n
+        print(n)
+        k -= 1
+        n -= 1
+    return increment
 
 # Guessing Game
 
@@ -92,7 +103,10 @@ def guess_linear():
     prompt_for_number(LOWER, UPPER)
     num_guesses = 1
     guess = LOWER
-    "*** YOUR CODE HERE ***"
+    while not correct:
+        guess = LOWER + 1
+        correct = is_correct(guess)
+        num_guesses = num_guesses + 1
     return num_guesses
 def guess_binary():
     """Return the number of attempted guesses. Implement a faster search
