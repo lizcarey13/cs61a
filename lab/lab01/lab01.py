@@ -103,7 +103,7 @@ def guess_linear():
     prompt_for_number(LOWER, UPPER)
     num_guesses = 1
     guess = LOWER
-    while guess != is_correct(guess):
+    while not is_correct(guess):
         guess += 1
         num_guesses = num_guesses + 1
     return num_guesses
@@ -119,7 +119,12 @@ def guess_binary():
     num_guesses = 1
     lower, upper = LOWER, UPPER
     guess = (lower + upper) // 2
-    "*** YOUR CODE HERE ***"
+    while not is_correct(guess):
+        if is_too_high(guess):
+            guess = (lower + guess) // 2
+        else:
+            guess = (guess + upper) // 2
+        num_guesses +=1
     return num_guesses
 
 # Receive user input. You do not need to understand the code below this line.
