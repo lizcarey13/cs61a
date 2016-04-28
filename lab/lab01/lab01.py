@@ -121,9 +121,10 @@ def guess_binary():
     guess = (lower + upper) // 2
     while not is_correct(guess):
         if is_too_high(guess):
-            guess = (lower + guess) // 2
+            upper = guess - 1
         else:
-            guess = (guess + upper) // 2
+            lower = guess + 1
+        guess = (lower + upper) // 2
         num_guesses +=1
     return num_guesses
 
