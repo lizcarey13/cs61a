@@ -61,3 +61,14 @@ def is_prime(n):
 			k -= 1
 	return True
 
+#my solution above seems to work, answer from prof is below: 
+def is_prime2(n):
+	if n == 1:
+		return False
+	k = 2
+	while k < n:
+		if n % k == 0:
+			return False
+		k += 1
+	return True
+
