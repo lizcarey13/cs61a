@@ -39,21 +39,14 @@ def handle_overflow(s1, s2):
 	>>> handle_overflow(35, 30)
 	No space left in either section.
 	"""
-	add1, add2 = 0, 0
-	if s1 < 30: 
-		add1 = 30 - s1
-	if s2 > 30: 
-		add2 = 30 - s2
 
-	if s1 >= 30 and s2 >= 30:
-		return "No space in either section"
-	elif s1 <= 30 and s2 <= 30:
-		return "No overflow"
+	if s1 <= 30 and s2 <= 30:
+		print("No overflow.")
 	elif s1 > 30 and s2 < 30: 
-		add2 = 30 - s2
-		return add2, "spot left in Section 2"
+		print (str(30-s2) + " spots left in Section 2.")
 	elif s1 < 30 and s2 > 30:
-		add1 = 30 - s1
-		return add1, "spot left is Section 1"
+		print(str(30-s1) + " spots left in Section 1.")
+	else: 
+		print("No space left in either section.")
 
 
