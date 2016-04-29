@@ -49,4 +49,15 @@ def handle_overflow(s1, s2):
 	else: 
 		print("No space left in either section.")
 
+"""Fill in the is prime function, which returns True 
+if n is a prime number and False otherwise.
+"""
+def is_prime(n):
+	k = n - 1
+	while k > 1: 
+		if n % k == 0:
+			return False
+		else: 
+			k -= 1
+	return True
 
