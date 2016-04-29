@@ -72,3 +72,21 @@ def is_prime2(n):
 		k += 1
 	return True
 
+"""Implement fizzbuzz(n), which prints numbers from 1 to n 
+(inclusive). However, for numbers divisible by 3, print “fizz”. For numbers divisible by 5, print “buzz”. For
+numbers divisible by both 3 and 5, print “fizzbuzz”.
+"""
+
+def fizzbuzz(n):
+	count = 1
+	while count < n + 1: 
+		if count % 15 == 0:
+			print('Fizzbuzz')
+		elif count % 3 == 0:
+			print('Fizz')
+		elif count % 5 == 0:
+			print('Buzz')
+		else: 
+			print(count)
+		count += 1
+
