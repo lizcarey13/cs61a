@@ -45,7 +45,7 @@ def iter_solve(guess, done, update, iteration_limit=32):
 	when applied to the result. Causes error if more than
 	ITERATION_LIMIT applications of UPDATE are necessary."""
 	
-while not done(guess):
+	while not done(guess):
 		if iteration_limit <= 0:
 			raise ValueError("failed to converge")
 		guess, iteration_limit = update(guess), iteration_limit-1
