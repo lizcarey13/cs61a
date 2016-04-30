@@ -56,3 +56,19 @@ while not done(guess):
 * A general numerical technique for finding approximate solutions to f(x) = 0, given the function f, its derivative f′, and an initial guess, x0. It produces a result to some desired tolerance (that is, to some definition of “close enough”).
 
 ![Newton's Method gif](https://upload.wikimedia.org/wikipedia/commons/e/e0/NewtonIteration_Ani.gif)
+
+Given a guess, x<sub>k</sub>, compute the next guess, x<sub>k</sub>+1 by <br>
+x<sub>k</sub>+1 = x<sub>k</sub> − f(x<sub>k</sub>) / f′(x<sub>k</sub>) 
+
+```
+def newton_solve(func, deriv, start, tolerance):
+	"""Return x such that |FUNC(x)| < TOLERANCE, given initial
+	estimate START, assuming DERIV is the derivatative of FUNC."""
+	
+	def close_enough(x):
+		return abs(func(x)) < tolerance
+	def newton_update(x):
+		return x - func(x) / deriv(x)
+	
+	return iter_solve(start, close_enough, newton_update)
+```
