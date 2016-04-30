@@ -105,7 +105,7 @@ def guess_linear():
     guess = LOWER
     while not is_correct(guess):
         guess += 1
-        num_guesses = num_guesses + 1
+        num_guesses += 1
     return num_guesses
 def guess_binary():
     """Return the number of attempted guesses. Implement a faster search

@@ -78,6 +78,27 @@ numbers divisible by both 3 and 5, print “fizzbuzz”.
 """
 
 def fizzbuzz(n):
+	"""
+	>>> result = fizzbuzz(16)
+	1
+	2
+	fizz
+	4
+	buzz
+	fizz
+	7
+	8
+	fizz
+	buzz
+	11
+	fizz
+	13
+	14
+	fizzbuzz
+	16
+	>>> result is None
+	True
+	"""
 	count = 1
 	while count < n + 1: 
 		if count % 15 == 0:
@@ -89,4 +110,28 @@ def fizzbuzz(n):
 		else: 
 			print(count)
 		count += 1
+
+"""Fill in the choose function, which returns 
+the number of ways to choose k items from
+n items. Mathematically, choose(n, k) is defined as:
+n × (n − 1) × (n − 2) × · · · × (n − k + 1) /
+k × (k − 1) × (k − 2) × · · · × 2 × 1
+"""
+
+
+
+def choose(n, k):
+	"""Returns the number of ways to choose K items from
+	N items.
+	>>> choose(5, 2)
+	10
+	>>> choose(20, 6)
+	38760
+	"""
+	total = 1
+	i = 0
+	while i < k:
+		total = total * (n - i) // (i + 1)
+		i += 1
+	return total 
 
