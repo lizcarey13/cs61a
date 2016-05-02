@@ -135,3 +135,59 @@ def choose(n, k):
 		i += 1
 	return total 
 
+def negate(f, x):
+	return -f(x)
+
+def square(n):
+	return n * n
+
+def double(n):
+	return 2 * n
+
+"""
+>>>negate(square, 5)
+-25
+>>>negate(double, -19)
+38
+>>>negate(double, negate(square, -4))
+32
+"""
+
+def keep_ints(cond, n):
+	"""Prints out all the integers 1..i..n where cond(i) is True
+
+	>>>def is_even(x):
+			#Even numbers have remainder 0 when divided by 2.
+			return x % 2 == 0
+	>>>keep_ints(is_even, 5)
+	2
+	4
+	"""
+	i = 1
+	while i <= n:
+		if cond(i):
+			print(i)
+		i += 1
+
+def keep_ints2(n):
+	"""Returns a function which takes one parameter cond and
+	prints out all integers 1..i..n where calling cond(i)
+	returns True.
+	>>> def is_even(x):
+			#Even numbers have remainder 0 when divided by 2.
+			return x % 2 == 0
+	>>>keep_ints(5)(is_even)
+	2
+	4
+	"""
+	def do_keep(cond):
+		i = 1
+		while i <= n:
+			if cond(i):
+				print(i)
+			i += 1
+	return do_keep
+
+def is_even(x):
+	return x % 2 == 0
+
