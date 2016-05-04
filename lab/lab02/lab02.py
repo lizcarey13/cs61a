@@ -61,9 +61,7 @@ def count_up(n):
     5
     """
     def counter(i):
-        if i > n:
-            return n
-        else:
+        if i <= n:
             print(i)
             counter(i + 1)
     counter(1)
