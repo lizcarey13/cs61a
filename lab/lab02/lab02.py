@@ -66,7 +66,7 @@ def count_up(n):
             counter(i + 1)
     counter(1)
 
-def gcd(a, b):
+def gcd(m, n):
     """Returns the greatest common divisor of a and b.
     Should be implemented using recursion.
 
@@ -79,4 +79,9 @@ def gcd(a, b):
     >>> gcd(40, 40)
     40
     """
-    "*** YOUR CODE HERE ***"
+    if m == n:
+        return m
+    elif m < n:
+        return gcd(n, m)
+    else: 
+        return gcd(m - n, n)
