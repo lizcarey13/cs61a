@@ -61,7 +61,11 @@ def count_up(n):
     5
     """
     def counter(i):
-        "*** YOUR CODE HERE ***"
+        if i > n:
+            return n
+        else:
+            print(i)
+            counter(i + 1)
     counter(1)
 
 def gcd(a, b):
