@@ -5,8 +5,7 @@ countdown from n to 1.
 """
 
 def countdown(n):
-	if n == 1:
-		return 1
-	else:
-		print (n)
-		return countdown(n-1)
+	if n <= 0:
+		return
+	print(n)
+	countdown(n-1)
