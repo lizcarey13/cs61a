@@ -34,7 +34,7 @@ Create rationals or implement rational opertaions | numerators or denominators |
 Implement selectors and constructor for rationals | two-element lists | List Literals and element selection
 
 
-**Violation abstraciton barriers:** 
+**Violation abstraction barriers:** 
 - Will still run, but it's harder to change program. 
 
 ```python
