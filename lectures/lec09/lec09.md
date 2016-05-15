@@ -28,8 +28,10 @@
 ________
 
 Parts of the program that... | Treat rationals as... | Using ...
----| ---| ---|
-User rational numbers to perform computation | 
+---| --- | ---
+Use rational numbers to perform computation | whole data values | add_rational, mul_rational, rationals_are_equal, print_rational 
+Create rationals or implement rational opertaions | numerators or denominators | rational, numer, denom
+Implement selectors and constructor for rationals | two-element lists | List Literals and element selection
 
 
 **Violation abstraciton barriers:** 
