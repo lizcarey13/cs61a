@@ -32,7 +32,7 @@ Parts of the program that... | Treat rationals as... | Using ...
 User rational numbers to perform computation | 
 
 
-Violation abstraciton barriers: 
+**Violation abstraciton barriers:** 
 - Will still run, but it's harder to change program. 
 
 ```python
